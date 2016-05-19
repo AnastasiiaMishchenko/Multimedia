@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Catch the cat</title>
+	<script src="index.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script>
+    	$(document).ready(function(){
+    		$(".window").hide();
+    	})
+    </script>
+</head>
+
+<body onload="start()">
+	<!-- <audio src="sound.mp3" autoplay="autoplay"></audio> -->
+	<div class="cats">
+		<div id="pole">
+			<input type="text" id="cl">
+			<img src="1.png" alt="" id="btfl" onclick="clickedOnBtf()">
+		</div>
+		<div id="images">
+			<img src="2.png" alt="" id="btfl1" onclick="ChangeImage(this)">
+			<img src="3.png" alt="" id="btfl1" onclick="ChangeImage(this)">
+			<img src="4.png" alt="" id="btfl1" onclick="ChangeImage(this)">
+			<img src="5.png" alt="" id="btfl1" onclick="ChangeImage(this)">
+			<img src="6.png" alt="" id="btfl1" onclick="ChangeImage(this)">
+		</div>
+	</div>
+
+	<div class="window">
+		<div id="dialog" title="Let's catch the cat!">
+  		<p>The main idea of this game is to catch the cat which behaved badly. Be careful, it could move faster or slower. Every time, when you will earn new 10 points, cat will change its speed. Your main goal for today,is to catch it 100 times. Goog luck and be brave. Kind regards, Anastasiia, the owner of this beautiful cat ;)</p>
+	</div>
+	</div>
+
+ 	<div class="start">
+		<label class="text">Catch the Cat</label><br>
+		<button id="start" class="btn location">Start</button>
+			<script>
+			$("#start").click(function(){
+				$(".start").hide();
+				$(".window").hide();
+				$(".cats").show();
+			});
+			</script>
+		<button onclick="Display()" class="btn location2">About</button>
+			<script>
+ 		function Display() {
+    		$( "#dialog" ).dialog();
+ 		}
+  	</script>	
+			
+		<div id="images2">
+			<img src="1.png" alt="" id="img1">
+			<img src="2.png" alt="" id="img2">
+			<img src="3.png" alt="" id="img3">
+			<img src="4.png" alt="" id="img4">
+			<img src="5.png" alt="" id="img5">
+			<img src="6.png" alt="" id="img6">
+		</div>
+	</div>
+	
+</body>
+</html>
